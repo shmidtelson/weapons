@@ -101,7 +101,8 @@ public void OnPluginStart()
 
 public Action CommandWeaponSkins(int client, int args)
 {
-    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION))
+    {
 		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
 		return Plugin_Handled;
 	}
@@ -123,7 +124,8 @@ public Action CommandWeaponSkins(int client, int args)
 
 public Action CommandSeedMenu(int client, int args)
 {
-    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION))
+    {
 		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
 		return Plugin_Handled;
 	}
@@ -139,7 +141,8 @@ public Action CommandSeedMenu(int client, int args)
 
 public Action CommandKnife(int client, int args)
 {
-    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION))
+    {
 		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
 		return Plugin_Handled;
 	}
@@ -161,7 +164,8 @@ public Action CommandKnife(int client, int args)
 
 public Action CommandWSLang(int client, int args)
 {
-    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION))
+    {
 		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
 		return Plugin_Handled;
 	}
@@ -183,7 +187,8 @@ public Action CommandWSLang(int client, int args)
 
 public Action CommandNameTag(int client, int args)
 {
-    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION))
+    {
 		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
 		return Plugin_Handled;
 	}
