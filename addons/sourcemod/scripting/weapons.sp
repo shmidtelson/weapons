@@ -20,6 +20,7 @@
 #include <sdkhooks>
 #include <cstrike>
 #include <PTaH>
+#include <csgo_colors>
 
 #pragma semicolon 1
 #pragma newdecls required
@@ -100,6 +101,11 @@ public void OnPluginStart()
 
 public Action CommandWeaponSkins(int client, int args)
 {
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
+		return Plugin_Handled;
+	}
+
 	if (IsValidClient(client))
 	{
 		int menuTime;
@@ -117,6 +123,11 @@ public Action CommandWeaponSkins(int client, int args)
 
 public Action CommandSeedMenu(int client, int args)
 {
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
+		return Plugin_Handled;
+	}
+
 	if(!g_bEnableSeed)
 	{
 		ReplyToCommand(client, " %s \x02%T", g_ChatPrefix, "SeedDisabled", client);
@@ -128,6 +139,11 @@ public Action CommandSeedMenu(int client, int args)
 
 public Action CommandKnife(int client, int args)
 {
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
+		return Plugin_Handled;
+	}
+
 	if (IsValidClient(client))
 	{
 		int menuTime;
@@ -145,6 +161,11 @@ public Action CommandKnife(int client, int args)
 
 public Action CommandWSLang(int client, int args)
 {
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
+		return Plugin_Handled;
+	}
+
 	if (IsValidClient(client))
 	{
 		int menuTime;
@@ -162,6 +183,11 @@ public Action CommandWSLang(int client, int args)
 
 public Action CommandNameTag(int client, int args)
 {
+    if (!(GetUserFlagBits(client) & ADMFLAG_RESERVATION)){
+		CGOPrintToChat(client, "{GREEN}Эта функция только для VIP");
+		return Plugin_Handled;
+	}
+
 	if(!g_bEnableNameTag)
 	{
 		ReplyToCommand(client, " %s \x02%T", g_ChatPrefix, "NameTagDisabled", client);
